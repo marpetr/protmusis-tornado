@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script type="text/javascript" src="{{ static_url('script.js') }}"></script>
+{% end %}
+
+{% block content %}
+<div id="debug"></div>
+<h1>Komanda {{ team.name }}</h1>
+<div id="question_view">
+	<h3>Klausimas Nr. <span id="question_num"></span></h3>
+	<p><img id="question_img" /></p>
+	<p><textarea id="question_textarea"></textarea></p>
+	<p>Liko laiko: <span id="question_time_left"></span> sek.</p>
+</div>
+<div id="idle_view">Laukite nurodymų</div>
+<script type="text/javascript">
+$(window).load(initTeamView);
+</script>
+{% end %}

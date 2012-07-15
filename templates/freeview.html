@@ -1,0 +1,18 @@
+{% extends "collection/base.html" %}
+
+{% block head %}
+<script type="text/javascript" src="{{ STATIC_URL }}script.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="debug"></div>
+<div id="question_view">
+	<h3>Klausimas Nr. <span id="question_num"></span></h3>
+	<p><img id="question_img" /></p>
+	<p>Liko laiko: <span id="question_time_left"></span> sek.</p>
+</div>
+<div id="idle_view"></div>
+<script type="text/javascript">
+$(window).load(initFreeView);
+</script>
+{% endblock %}
